@@ -43,7 +43,7 @@ namespace Asteroids
             AddTorque();
             if(shouldSetStartSize)
             {
-                SetSize(0, 0);
+                SetSize(0,0);
             }
         }
         

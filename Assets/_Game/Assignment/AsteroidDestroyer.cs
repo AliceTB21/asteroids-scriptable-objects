@@ -9,27 +9,31 @@ namespace Asteroids
         [SerializeField] Asteroid asteroidPrefab;
 
         [SerializeField] private AsteroidRuntimeSet _asteroids;
-        [SerializeField] private int maxSplits;
+        [SerializeField] private int maxSplits = 1;
 
         public void OnAsteroidHitByLaser(int asteroidId)
         {
             Asteroid asteroid = _asteroids.Get(asteroidId);
             float asteroidSize = _asteroids.Get(asteroidId).GetScale;
 
-            if (asteroid.GetScale <= 0.5f)
-            {
-
-            }
-            else
+            if(asteroidSize >= 0.5f)
             {
                 if(asteroid.GetScale > 0.7)
                 {
-                    for(int i = 0; i < maxSplits - 1; i++)
+                    if(maxSplits <= 0)
+                    {
+                        maxSplits = 1;
+                    }
+
+                    for(int i = 0; i < maxSplits; i++)
                     {
                         SpawnNewAsteroid(asteroid, asteroidSize);
                     }
                 }
-                SpawnNewAsteroid(asteroid, asteroidSize);
+                else
+                {
+                    SpawnNewAsteroid(asteroid, asteroidSize);
+                }
             }
 
             Destroy(asteroid);
