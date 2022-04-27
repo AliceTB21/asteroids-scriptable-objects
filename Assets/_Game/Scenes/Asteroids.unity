@@ -234,7 +234,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1867257715}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a1ae38084ec4c29aa5d36b28f72a324, type: 3}
+  m_Script: {fileID: 11500000, guid: acf163e1084ee744d8efad748d685a24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   asteroidRuntimeSet: {fileID: 11400000, guid: 4d668ee832e48d74fa49b4ad4be7fad1, type: 2}
@@ -266,11 +266,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1867257715}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f134eeb3984f41dfb0d8b9686f5e116e, type: 3}
+  m_Script: {fileID: 11500000, guid: 36abce700741bdc45bcf07a499fe395d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   asteroidPrefab: {fileID: 1784223117350305363, guid: 01106835b2bc0e347a3bb06b7544b51a, type: 3}
   _asteroids: {fileID: 11400000, guid: 4d668ee832e48d74fa49b4ad4be7fad1, type: 2}
+  maxSplits: 2
 --- !u!114 &1867257719
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -8,7 +8,8 @@ namespace Asteroids
     {
         [SerializeField] Asteroid asteroidPrefab;
 
-       [SerializeField] private AsteroidRuntimeSet _asteroids;
+        [SerializeField] private AsteroidRuntimeSet _asteroids;
+        [SerializeField] private int maxSplits;
 
         public void OnAsteroidHitByLaser(int asteroidId)
         {
@@ -21,9 +22,9 @@ namespace Asteroids
             }
             else
             {
-                if(asteroid.GetScale == 1)
+                if(asteroid.GetScale > 0.7)
                 {
-                    for(int i = 0; i < 1; i++)
+                    for(int i = 0; i < maxSplits - 1; i++)
                     {
                         SpawnNewAsteroid(asteroid, asteroidSize);
                     }
